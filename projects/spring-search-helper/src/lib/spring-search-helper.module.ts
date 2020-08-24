@@ -1,12 +1,10 @@
-import { NgModule } from '@angular/core';
-import { SpringSearchHelperComponent } from './spring-search-helper.component';
-
-
+import { NgModule, Optional, SkipSelf, ModuleWithProviders } from '@angular/core';
 
 @NgModule({
-  declarations: [SpringSearchHelperComponent],
-  imports: [
-  ],
-  exports: [SpringSearchHelperComponent]
+  declarations: [],
+  imports: [],
+  exports: []
 })
-export class SpringSearchHelperModule { }
+export class SpringSearchHelperModule {
+  constructor(@Optional() @SkipSelf() parentModule: SpringSearchHelperModule) {}
+}
